@@ -3,7 +3,6 @@ import HomeHero from '../components/Home Companents/HomeHero';
 import HomeAbout from '../components/Home Companents/HomeAbout';
 import HomeServices from '../components/Home Companents/HomeServices';
 import HomeNews from '../components/Home Companents/HomeNews';
-import HomeCTA from '../components/Home Companents/HomeCTA';
 
 const Home = () => {
   return (
@@ -12,7 +11,6 @@ const Home = () => {
       <HomeAbout />
       <HomeServices />
       <HomeNews />
-      <HomeCTA />
     </div>
   );
 };

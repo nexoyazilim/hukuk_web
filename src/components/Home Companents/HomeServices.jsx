@@ -57,9 +57,7 @@ const HomeServices = () => {
             </p>
           </div>
         </div>
-        <div className="services-cta">
-          <a href="/hizmetlerimiz" className="btn btn-primary">Tüm Hizmetlerimizi Görün</a>
-        </div>
+        
       </div>
     </section>
   );

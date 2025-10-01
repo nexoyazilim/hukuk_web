@@ -8,10 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3 className="footer-title">Hukuk Bürosu</h3>
-            <p className="footer-description">
-              Hukuki danışmanlık alanında uzman ekibimizle, müvekkillerimize en kaliteli hizmeti sunmaktayız.
-            </p>
+            <h3 className="footer-title">İletişim</h3>
             <div className="contact-info">
               <p><strong>Telefon:</strong> +90 (212) 123 45 67</p>
               <p><strong>E-posta:</strong> info@hukukburosu.com</p>

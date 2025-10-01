@@ -1,10 +1,18 @@
 .hero {
-  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.773), rgba(0, 0, 0, 0.378)), 
+              url('https://barandogan.av.tr/images/tokmak-kitap-1280x720.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
   padding: 120px 0 80px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero::before {
@@ -24,6 +32,7 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
 }
 
 .hero-title {
@@ -59,29 +68,31 @@
   cursor: pointer;
 }
 
-.btn-primary {
-  background-color: white;
-  color: #1e40af;
+.hero .btn-primary {
+  background-color: white !important;
+  color: rgb(0, 0, 0) !important;
 }
 
-.btn-primary:hover {
-  background-color: #f8fafc;
+.hero .btn-primary:hover {
+  background-color: #f8fafc !important; 
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.btn-secondary {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-}
 
-.btn-secondary:hover {
-  background-color: white;
-  color: #1e40af;
+/* Parallax effect için media query */
+@media (prefers-reduced-motion: no-preference) {
+  .hero {
+    background-attachment: scroll;
+  }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+    min-height: 80vh;
+  }
+  
   .hero-title {
     font-size: 2.5rem;
   }

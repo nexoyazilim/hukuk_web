@@ -14,7 +14,6 @@ const HomeHero = () => {
         </p>
         <div className="hero-buttons">
           <a href="#iletisim" className="btn btn-primary">Hemen İletişime Geç</a>
-          <a href="#hakkimizda" className="btn btn-secondary">Hakkımızda</a>
         </div>
       </div>
     </section>
