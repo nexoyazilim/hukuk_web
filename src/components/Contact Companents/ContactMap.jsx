@@ -8,14 +8,17 @@ const ContactMap = () => {
         <h2 className="section-title">Ofisimizi Ziyaret Edin</h2>
         <div className="map-container">
           <div className="map-placeholder">
-            <svg width="100%" height="400" viewBox="0 0 800 400" fill="none">
-              <rect width="800" height="400" fill="#f1f5f9"/>
-              <rect x="50" y="50" width="700" height="300" fill="#e2e8f0" rx="8"/>
-              <circle cx="400" cy="200" r="8" fill="#1e40af"/>
-              <path d="M400 200 L420 180 L380 180 Z" fill="#1e40af"/>
-              <text x="400" y="250" textAnchor="middle" fill="#64748b" fontSize="16">Levent Mahallesi, Büyükdere Caddesi</text>
-              <text x="400" y="270" textAnchor="middle" fill="#64748b" fontSize="14">No: 123, Kat: 15, Şişli/İstanbul</text>
-            </svg>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.0738749988754!2d29.012447315437867!3d41.081666979289745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab6f707eb12f1%3A0x31c6e85f8daff051!2zQsO8ecO8a2RlcmUgQ2QuLCDFnmnFn2xpL8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1635789012345!5m2!1str!2str"
+              width="100%" 
+              height="400" 
+              style={{ border: 0 }} 
+              allowFullScreen="" 
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Hukuk Bürosu Konum"
+              className="google-map"
+            />
           </div>
           <div className="map-info">
             <h3 className="map-info-title">Nasıl Gelirsiniz?</h3>

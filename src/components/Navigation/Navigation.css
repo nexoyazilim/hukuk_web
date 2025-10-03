@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #000029;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -28,12 +28,18 @@
 }
 
 
-.logo-text {
-  color: rgb(31, 31, 31);
-  font-weight: 800;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.logo-image {
+  height: 80px;
+  width: auto;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+  background: transparent;
+  filter: contrast(1.2) brightness(1.1);
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
 }
 
 .nav-menu {
@@ -44,7 +50,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.3s ease;
@@ -52,7 +58,7 @@
 }
 
 .nav-link:hover {
-  color: #000000;
+  color: #fbbf24;
 }
 
 .nav-link::after {
@@ -62,7 +68,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #000000;
+  background-color: #fbbf24;
   transition: width 0.3s ease;
 }
 
@@ -81,16 +87,16 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: #666;
+  color: #cbd5e1;
 }
 
 .lang-active {
-  color: #000000;
+  color: #ffffff;
   font-weight: 600;
 }
 
 .lang-separator {
-  color: #ccc;
+  color: #94a3b8;
 }
 
 .lang-option {
@@ -99,7 +105,7 @@
 }
 
 .lang-option:hover {
-  color: #000000;
+  color: #fbbf24;
 }
 
 .mobile-menu-toggle {
@@ -115,7 +121,7 @@
 .mobile-menu-toggle span {
   width: 25px;
   height: 3px;
-  background-color: #333;
+  background-color: #ffffff;
   transition: all 0.3s ease;
 }
 
@@ -138,10 +144,10 @@
     top: 80px;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: #000029;
     flex-direction: column;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
@@ -156,7 +162,7 @@
 
   .nav-menu .nav-link {
     padding: 1rem 0;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     text-align: center;
   }
@@ -179,13 +185,9 @@
     height: 70px;
   }
   
-  .logo-container {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .logo-text {
-    font-size: 1.5rem;
+  .logo-image {
+    height: 60px;
+    max-width: 220px;
   }
   
   .nav-menu {

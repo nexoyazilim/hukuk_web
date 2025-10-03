@@ -22,12 +22,11 @@ const AboutCards = () => {
           </div>
           <div className="content-image">
             <div className="image-placeholder">
-              <svg width="100%" height="300" viewBox="0 0 400 300" fill="none">
-                <rect width="400" height="300" fill="#f1f5f9" rx="8"/>
-                <circle cx="200" cy="150" r="50" fill="#e2e8f0"/>
-                <path d="M150 150 L200 100 L250 150 L200 200 Z" fill="#cbd5e1"/>
-                <text x="200" y="160" textAnchor="middle" fill="#64748b" fontSize="14">Hukuk Bürosu</text>
-              </svg>
+              <img 
+                src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=800&q=80" 
+                alt="Adalet Terazisi" 
+                className="about-image-content"
+              />
             </div>
           </div>
         </div>

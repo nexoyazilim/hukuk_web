@@ -10,6 +10,7 @@ import Announcement from './pages/Announcement';
 // Navigation component
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 // Global styles
 import './styles/global.css';
@@ -17,6 +18,7 @@ import './styles/global.css';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <Navigation />
         <main className="main-content">

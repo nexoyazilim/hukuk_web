@@ -3,7 +3,7 @@ import '../../css/Announcement Css/AnnouncementHero.css';
 
 const AnnouncementHero = () => {
   return (
-    <section className="page-hero">
+    <section className="announcement-hero">
       <div className="container">
         <h1 className="page-title">Duyurular & Yayınlar</h1>
         <p className="page-subtitle">

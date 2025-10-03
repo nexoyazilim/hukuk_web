@@ -1,5 +1,5 @@
 .about-team {
-  padding: 100px 0;
+  padding: 80px 0;
   background: white;
 }
 
@@ -9,98 +9,119 @@
   padding: 0 20px;
 }
 
-.preview-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.preview-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #1a1a1a;
-}
-
-.preview-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #555;
-  margin-bottom: 2rem;
-}
-
-.preview-stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.stat-item {
+.team-header {
   text-align: center;
-  padding: 2rem;
-  background: #f8fafc;
-  border-radius: 12px;
-  border: 2px solid #e2e8f0;
+  max-width: 800px;
+  margin: 0 auto 4rem;
 }
 
-.stat-number {
+.team-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1e40af;
+  margin-bottom: 1rem;
+  color: #000029;
+}
+
+.team-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.team-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(30, 53, 78, 0.15);
+}
+
+.lawyer-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fbbf24;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .lawyer-image {
+  border-color: #000029;
+  transform: scale(1.05);
+}
+
+.lawyer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lawyer-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000029;
   margin-bottom: 0.5rem;
 }
 
-.stat-label {
+.lawyer-title {
   font-size: 1rem;
-  color: #666;
+  color: #fbbf24;
   font-weight: 500;
 }
 
-.btn {
-  display: inline-block;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
 }
 
-.btn-primary {
-  background-color: #1e40af;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #1d4ed8;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.3);
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .preview-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
   
-  .preview-text {
-    text-align: center;
+  .team-header {
+    margin-bottom: 3rem;
   }
   
-  .preview-stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+  .team-title {
+    font-size: 2rem;
   }
   
-  .stat-item {
+  .team-description {
+    font-size: 1rem;
+  }
+  
+  .team-card {
     padding: 1.5rem 1rem;
   }
   
-  .stat-number {
-    font-size: 2rem;
+  .lawyer-image {
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -109,7 +130,25 @@
     padding: 60px 0;
   }
   
-  .preview-stats {
-    grid-template-columns: 1fr;
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .team-card {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .lawyer-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .lawyer-name {
+    font-size: 1.1rem;
+  }
+  
+  .lawyer-title {
+    font-size: 0.9rem;
   }
 }

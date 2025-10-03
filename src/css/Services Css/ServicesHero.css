@@ -1,14 +1,47 @@
-.page-hero {
-  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+.services-hero {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.762), rgba(0, 0, 41, 0.362)), 
+              url('https://www.shutterstock.com/image-photo/successful-deal-closeup-shot-two-260nw-2603310965.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   color: white;
   padding: 120px 0 80px;
   text-align: center;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.services-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  animation: heroFadeIn 1s ease-out;
+  z-index: 0;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .page-title {

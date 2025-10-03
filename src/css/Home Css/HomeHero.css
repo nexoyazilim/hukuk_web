@@ -1,11 +1,11 @@
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.773), rgba(0, 0, 0, 0.378)), 
-              url('https://barandogan.av.tr/images/tokmak-kitap-1280x720.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.762), rgba(0, 0, 41, 0.362)), 
+              url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1920&q=80');
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
   background-repeat: no-repeat;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   padding: 120px 0 80px;
   text-align: center;
   position: relative;
@@ -15,16 +15,27 @@
   align-items: center;
 }
 
-.hero::before {
+.hero::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
-  background-size: cover;
+  background: inherit;
+  animation: heroFadeIn 1s ease-out;
+  z-index: 0;
 }
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 .hero-content {
   position: relative;
@@ -36,17 +47,21 @@
 }
 
 .hero-title {
+  color: #ffffff;
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  animation: fadeInDown 1s ease-out;
 }
 
 .hero-subtitle {
+  color: #ffffff;
   font-size: 1.3rem;
   margin-bottom: 2.5rem;
-  opacity: 0.9;
+  opacity: 0.95;
   line-height: 1.6;
+  animation: fadeInUp 1s ease-out 0.2s backwards;
 }
 
 .hero-buttons {
@@ -54,6 +69,7 @@
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.4s backwards;
 }
 
 .btn {
@@ -69,14 +85,25 @@
 }
 
 .hero .btn-primary {
-  background-color: white !important;
-  color: rgb(0, 0, 0) !important;
+  background-color: #fbbf24 !important;
+  color: #000029 !important;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
 }
 
 .hero .btn-primary:hover {
-  background-color: #f8fafc !important; 
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(251, 191, 36, 0.5);
+}
+
+.hero .btn-secondary {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+.hero .btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
 }
 
 
@@ -87,10 +114,35 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .hero {
+    min-height: 70vh;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    min-height: 65vh;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     background-attachment: scroll;
-    min-height: 80vh;
+    min-height: 60vh;
+    padding: 100px 0 60px;
   }
   
   .hero-title {
@@ -104,15 +156,26 @@
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 100px 0 60px;
+    padding: 80px 0 50px;
+    min-height: 55vh;
   }
   
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
   }
 }

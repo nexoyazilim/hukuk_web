@@ -1,5 +1,5 @@
 .specialized-services {
-  padding: 100px 0;
+  padding: 60px 0;
   background-color: #f8fafc;
 }
 
@@ -14,7 +14,8 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  color: #1a1a1a;
+  color: #000029;
+  animation: fadeInDown 0.8s ease-out;
 }
 
 .specialized-grid {
@@ -24,28 +25,42 @@
 }
 
 .specialized-card {
-  background: white;
+  background: #ffffff;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #1e40af;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(30, 53, 78, 0.08);
+  border-left: 4px solid #000029;
+  transition: all 0.3s ease;
+  animation: fadeInLeft 0.8s ease-out backwards;
 }
 
+.specialized-card:nth-child(1) { animation-delay: 0.1s; }
+.specialized-card:nth-child(2) { animation-delay: 0.2s; }
+.specialized-card:nth-child(3) { animation-delay: 0.3s; }
+.specialized-card:nth-child(4) { animation-delay: 0.4s; }
+.specialized-card:nth-child(5) { animation-delay: 0.5s; }
+.specialized-card:nth-child(6) { animation-delay: 0.6s; }
+
 .specialized-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(30, 53, 78, 0.15);
+  border-left-color: #fbbf24;
 }
 
 .specialized-title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #000029;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.specialized-card:hover .specialized-title {
+  color: #fbbf24;
 }
 
 .specialized-description {
-  color: #666;
+  color: #4b5563;
   line-height: 1.5;
   font-size: 0.95rem;
 }

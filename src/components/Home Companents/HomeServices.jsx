@@ -7,7 +7,7 @@ const HomeServices = () => {
       <div className="container">
         <h2 className="section-title">Hizmetlerimiz</h2>
         <p className="section-subtitle">
-          Geniş hizmet yelpazemizle tüm hukuki ihtiyaçlarınıza çözüm sunuyoruz
+          Deneyimli avukat kadromuz ve uzman ekibimizle, bireysel ve kurumsal müvekkillerimize geniş bir hizmet yelpazesi sunmaktayız. Her alanda en güncel mevzuatı takip ederek, müvekkillerimizin haklarını en iyi şekilde korumak ve hukuki süreçlerinde yanlarında olmak için çalışıyoruz.
         </p>
         <div className="services-grid">
           <div className="service-card">

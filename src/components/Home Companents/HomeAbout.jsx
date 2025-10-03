@@ -1,7 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/Home Css/HomeAbout.css';
 
 const HomeAbout = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   return (
     <section className="about-preview">
       <div className="container">
@@ -14,7 +19,14 @@ const HomeAbout = () => {
               sahip 120'nin üstünde avukat, danışman ve destek biriminden oluşan yetkin 
               bir ekiple sunmaktadır.
             </p>
-            <a href="/hakkimizda" className="btn btn-primary">Devamını Oku</a>
+            <div className="about-image">
+              <img 
+                src="https://i.hizliresim.com/chfi39v.png" 
+                alt="Adalet ve Hukuk" 
+                className="section-image"
+              />
+            </div>
+            <Link to="/hakkimizda" className="btn btn-primary" onClick={scrollToTop}>Devamını Oku</Link>
           </div>
           <div className="about-stats">
             <div className="stat-item">

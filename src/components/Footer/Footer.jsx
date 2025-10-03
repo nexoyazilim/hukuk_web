@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -19,20 +23,20 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-subtitle">Hızlı Linkler</h4>
             <ul className="footer-links">
-              <li><Link to="/hakkimizda">Hakkımızda</Link></li>
-              <li><Link to="/hizmetlerimiz">Hizmetlerimiz</Link></li>
-              <li><Link to="/duyurular">Duyurular</Link></li>
-              <li><Link to="/iletisim">İletişim</Link></li>
+              <li><Link to="/hakkimizda" onClick={scrollToTop}>Hakkımızda</Link></li>
+              <li><Link to="/hizmetlerimiz" onClick={scrollToTop}>Hizmetlerimiz</Link></li>
+              <li><Link to="/duyurular" onClick={scrollToTop}>Duyurular</Link></li>
+              <li><Link to="/iletisim" onClick={scrollToTop}>İletişim</Link></li>
             </ul>
           </div>
           
           <div className="footer-section">
             <h4 className="footer-subtitle">Hizmetlerimiz</h4>
             <ul className="footer-links">
-              <li><a href="/hizmetlerimiz#ticaret">Ticaret Hukuku</a></li>
-              <li><a href="/hizmetlerimiz#ceza">Ceza Hukuku</a></li>
-              <li><a href="/hizmetlerimiz#aile">Aile Hukuku</a></li>
-              <li><a href="/hizmetlerimiz#tazminat">Tazminat Hukuku</a></li>
+              <li><Link to="/hizmetlerimiz" onClick={scrollToTop}>Ticaret Hukuku</Link></li>
+              <li><Link to="/hizmetlerimiz" onClick={scrollToTop}>Ceza Hukuku</Link></li>
+              <li><Link to="/hizmetlerimiz" onClick={scrollToTop}>Aile Hukuku</Link></li>
+              <li><Link to="/hizmetlerimiz" onClick={scrollToTop}>Tazminat Hukuku</Link></li>
             </ul>
           </div>
           

@@ -3,7 +3,7 @@ import '../../css/Contact Css/ContactHero.css';
 
 const ContactHero = () => {
   return (
-    <section className="page-hero">
+    <section className="contact-hero">
       <div className="container">
         <h1 className="page-title">İletişim</h1>
         <p className="page-subtitle">
