@@ -20,7 +20,7 @@ const Navigation = () => {
         <div className="nav-content">
           <Link to="/" className="logo" onClick={handleNavClick}>
             <div className="logo-container">
-              <img src="/hukuk169.PNG" alt="MKS Hukuk Bürosu" className="logo-image" />
+              <img src={`${import.meta.env.BASE_URL}hukuk169.PNG`} alt="MKS Hukuk Bürosu" className="logo-image" />
             </div>
           </Link>
           
