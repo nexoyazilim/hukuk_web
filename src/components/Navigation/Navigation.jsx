@@ -43,12 +43,6 @@ const Navigation = () => {
           </div>
           
           <div className="nav-actions">
-            <div className="language-selector">
-              <span className="lang-active">TR</span>
-              <span className="lang-separator">|</span>
-              <span className="lang-option">EN</span>
-            </div>
-            
             <button className={`mobile-menu-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
               <span></span>
               <span></span>
